@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>New Account</mat-card-title>
+      
+    </mat-card-header>
+  
+    <mat-card-content>
+      <!-- Add content for the card body here -->
+      <div>
+           <form [formGroup]="newAccount">
+            <mat-form-field appearance="outline">
+                <mat-label>Account Id</mat-label>
+                <input matInput formControlName="accountid" [(ngModel)]="accountid">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Account Name</mat-label>
+                <input matInput formControlName="accountname" [(ngModel)]="accountname">
+            </mat-form-field>
+            <button mat-button  onClick="submit()">Submit</button>
+          </form>
+      </div>
+    </mat-card-content>
+  
+   
+  </mat-card>

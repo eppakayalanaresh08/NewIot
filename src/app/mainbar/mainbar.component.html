@@ -1,0 +1,25 @@
+<mat-sidenav mode="side" [(opened)]="opened">
+    <mat-nav-list>  
+      <!-- Menu item with a sub-menu -->
+      <mat-list-item >
+        
+        <a mat-list-item href="dashboard"><i class="bi bi-house-fill icon-size"></i> Accounts</a>
+      
+      </mat-list-item>
+      <mat-list-item>
+        <a mat-list-item href="#"><i class="bi bi-plus-square-fill"></i> New Devices</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a mat-list-item href="users"><i class="bi bi-people-fill"></i> Users</a>
+      </mat-list-item>
+      <mat-list-item class="mx-3" (click)="toggleSubMenu('submenu1')">
+        <span><i class="bi bi-gear-fill"></i> Settings</span>
+        
+      </mat-list-item>
+      <mat-list-item *ngIf="isSubMenuOpen('submenu1')">
+        <a mat-list-item href="settings">Device Types</a>
+       
+      </mat-list-item>
+    </mat-nav-list>
+
+</mat-sidenav>
